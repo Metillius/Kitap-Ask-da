@@ -109,7 +109,7 @@
     }
     .stand-topbar span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
 
-    /*an image will be added here
+    /* Replace this entire .placeholder block once you have the AI image:
        <img src="YOUR_IMAGE_URL" alt="Fikir Gazetesi Standı" style="width:100%;display:block;" />  */
     .placeholder {
       height: 380px;
@@ -148,6 +148,31 @@
       .logo img { height: 72px; }
       .stand-section { padding: 0 1.2rem; }
     }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: var(--ink);
+      padding: 2.2rem 2rem;
+      display: flex; align-items: center; justify-content: center;
+      gap: 2.5rem; flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .cta-text { color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.5; }
+    .cta-text strong { color: #ffffff; font-weight: 700; display: block; font-size: 1.1rem; margin-bottom: 0.2rem; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #e8b800; color: #111; 
+      font-size: 0.82rem; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.85rem 1.8rem;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .cta-btn:hover { background: #ffd000; transform: translateY(-1px); }
+    .cta-btn svg { flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .cta-banner { flex-direction: column; text-align: center; gap: 1.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -165,10 +190,23 @@
     <p class="hero-sub">
       Bir kitap yalnızca rafta durduğu sürece sessizdir.<br />
       <strong>Fikir Sende, Kitap Askıda</strong> kampanyasıyla fuarda bir kitap bırakabilir,
-      başkasının bıraktığı bir kitabı ücretsiz alabilirsiniz.<br />
+      başkasının bıraktığı bir kitabı ücretsiz alabilirsiniz.
     </p>
     <div class="accent-bar"></div>
   </section>
+
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <p class="cta-text">
+      <strong>Fikir Gazetesi'ni tanıyor musunuz?</strong>
+      Bağımsız, eleştirel, derinlikli habercilik.
+    </p>
+    <a href="https://fikirgazetesi.org" target="_blank" rel="noopener" class="cta-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Siteyi İnceleyin
+    </a>
+  </div>
 
   <div class="main">
     <div class="card">
